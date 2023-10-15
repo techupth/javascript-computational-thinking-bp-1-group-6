@@ -1,10 +1,26 @@
 function getLetterFrequency(words) {
   // Start coding here
+  let countletter = 0;
+  for (let letter in words){
+    if (words[letter] === "T" || "t"){
+    countletter++;
+    console.log(words[letter]+ " : " + countletter);
+    } if (words[letter] === "h"){
+      countletter++;
+      console.log(words[letter]+ " : " + countletter);
+    } else {
+        countletter = 0;
+        countletter++;
+        //console.log(words[letter]+ " : " + countletter);
+    }
+    //console.log(words[letter]+ " : " + countletter);
+  }
+  return countletter;
 }
 
 const str = "Techupth";
 
-getLetterFrequency(str);
+console.log(getLetterFrequency(str));
 
 /* Output:
 {
