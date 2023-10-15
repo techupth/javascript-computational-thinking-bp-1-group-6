@@ -1,25 +1,20 @@
 function getLetterFrequency(words) {
   // Start coding here
-  let countletter = 0;
-  for (let letter in words){
-    if (words[letter] === "T" || "t"){
-    countletter++;
-    console.log(words[letter]+ " : " + countletter);
-    } if (words[letter] === "h"){
-      countletter++;
-      console.log(words[letter]+ " : " + countletter);
-    } else {
-        countletter = 0;
-        countletter++;
-        //console.log(words[letter]+ " : " + countletter);
+  const letterFrequency = {};
+
+  for (let i = 0; i < words.length; i++) {
+    const letter = words[i].toLowerCase(); // แปลงอักษรเป็นตัวพิมพ์เล็กเพื่อไม่คำนึงถึงตัวพิมพ์ใหญ่หรือเล็ก
+    if (/[a-z]/.test(letter)) {
+      letterFrequency[letter] = (letterFrequency[letter] || 0) + 1;
     }
-    //console.log(words[letter]+ " : " + countletter);
   }
-  return countletter;
+
+  return letterFrequency;
 }
 
 const str = "Techupth";
 
+//getLetterFrequency(str);
 console.log(getLetterFrequency(str));
 
 /* Output:
@@ -27,8 +22,8 @@ console.log(getLetterFrequency(str));
   t: 2,
   e: 1,
   c: 1,
-	h: 2,
-	u: 1,
-	p: 1
+  h: 2,
+  u: 1,
+  p: 1
 }
 */

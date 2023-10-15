@@ -20,4 +20,5 @@ function getMostExpensiveProduct(products) {
   return mostExpensiveProduct;
 }
 
+//getMostExpensiveProduct(products); // Output: { name: "Laptop", price: 1000 }
 console.log(getMostExpensiveProduct(products)); // Output: { name: "Laptop", price: 1000 }
